@@ -4,6 +4,12 @@ on:
   pull_request:
     branches: 
       - 'main'
+  workflow_call:
+    workflows: ["CI for ARM64 on main"]
+    types: [requested]
+    branches:
+      - 'main'
+
 
 jobs:
   build:

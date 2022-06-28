@@ -1,0 +1,11 @@
+name: CI for ARM64 on main
+
+on:
+  push:
+    branches: 
+      - 'main'
+  
+jobs:
+  build_on_arm64:
+    uses: './.github/workflows/ci.yml'
+    runs-on: self-hosted
