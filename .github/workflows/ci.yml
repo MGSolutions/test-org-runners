@@ -1,0 +1,15 @@
+name: Regression and Unit Testing
+
+on:
+  pull_request:
+    branches: 
+      - 'main'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1
+        run: echo "Step 1 is ran"
+        
