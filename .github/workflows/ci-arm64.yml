@@ -8,6 +8,6 @@ on:
 jobs:
   build_on_arm64:
     name: Build on ARM64
-    uses: './.github/workflows/ci.yml@main'
+    uses: './.github/workflows/ci.yml'
     # runs-on: self-hosted
     
