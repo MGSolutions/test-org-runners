@@ -20,7 +20,7 @@ on:
 jobs:
   build:
     name: Build (shared)
-    runs-on: ${{ inputs.runner }}
+    runs-on: ${{ inputs.runner || 'ubuntu-latest' }}
     steps:
       - name: Step 1
         run: echo "Step 1 is ran"
