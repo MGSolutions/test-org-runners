@@ -5,16 +5,22 @@ on:
     branches: 
       - 'main'
   workflow_call:
-    workflows: ["CI for ARM64 on main"]
-    types: [requested]
-    branches:
-      - 'main'
+    # workflows: ["CI for ARM64 on main"]
+    # types: [requested]
+    inputs:
+      runner:
+        description: 'The github runner to use'
+        default: 'ubuntu-latest'
+        required: false
+        type: string
+    # branches:
+      # - 'main'
 
 
 jobs:
   build:
-    name: Build
-    runs-on: ubuntu-latest
+    name: Build (shared)
+    runs-on: ${{ inputs.runner }}
     steps:
       - name: Step 1
         run: echo "Step 1 is ran"
