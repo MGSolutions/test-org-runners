@@ -10,6 +10,5 @@ jobs:
     name: Build on ARM64
     uses: './.github/workflows/ci.yml'
     with:
-      runner: self-hosted
-    # runs-on: self-hosted
+      runner: 'self-hosted'
     
